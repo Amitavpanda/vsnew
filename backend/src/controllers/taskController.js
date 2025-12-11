@@ -14,7 +14,9 @@ exports.getAllTasks = async (req, res) => {
       const tasks = await Task.find().sort({ createdAt: -1 });
       res.json(tasks);
     } else {
-      res.json(inMemoryTasks);
+      // Sort in-memory tasks by createdAt descending to match MongoDB behavior
+      const sortedTasks = [...inMemoryTasks].sort((a, b) => b.createdAt - a.createdAt);
+      res.json(sortedTasks);
     }
   } catch (error) {
     res.status(500).json({ message: error.message });
