@@ -1,0 +1,23 @@
+{
+  "name": "mern-backend",
+  "version": "1.0.0",
+  "description": "Backend for MERN stack demo project",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": ["mern", "express", "mongodb", "nodejs"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
